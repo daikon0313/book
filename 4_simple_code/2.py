@@ -1,51 +1,52 @@
-###########################
-# import os
+from pathlib import Path
 
-# key = os.environ.get('TEST_API_KEY')
-# print(key)
+# ファイル一覧を取得
+# txt_folder = Path('./sample_docs')
+# txt_files = list(txt_folder.iterdir())
+# print(txt_files)
 
-###########################
-# from datetime import date
+# 絶対パスの取得
+# txt_folder = Path('./sample_docs')
+# abs_path = txt_folder.resolve()
+# print(abs_path)
+# print(type(abs_path))
 
-# today = date.today()
-# print(today)
-# print(type(today))
+# 名前の取得
+# txt_folder = Path('./sample_docs')
+# txt_file = Path('./sample_docs/sample.txt')
+# print(txt_folder.name)
+# print(txt_file.name)
 
-###########################
-# from datetime import datetime
+# パスの結合
+# footer_path = Path("./sample_docs") / "sample.txt"
+# print(footer_path)
+# print(type(footer_path))
 
-# now = datetime.now()
-# print(now)
-# print(type(now))
+# パスの確認
+# from pathlib import Path
 
-###########################
-from datetime import date
-from datetime import datetime
+# footer_path = Path("./sample_docs/sample.txt")
+# print(footer_path.exists())
 
-# dt = date(2024, 1, 13)
-# tm = datetime(2024, 1, 13, 15, 30, 45)
+# ファイルの作成
+# footer_path = Path("./sample_docs/sample_2.txt")
+# footer_path.touch()
 
-# tm = datetime(2024, 1, 13, 15, 30, 45)
-# y = tm.year
-# m = tm.month
-# d = tm.day
-# h = tm.hour
-# mi = tm.minute
-# s = tm.second
-# micro = tm.microsecond
+# ファイルの削除
+# footer_path = Path("./sample_docs/sample_2.txt")
+# footer_path.unlink(missing_ok=True)
 
-# print(y, m, d, h, mi, s, micro)
+# フォルダの作成
+# outputs_path = Path("./outputs")
+# outputs_path.mkdir(exist_ok=True)
 
-###########################
-# d_1 = datetime(2024, 1, 13, 15, 30, 45)
-# d_2 = datetime(2024, 1, 13, 17, 30, 45)
-# delta = d_2 - d_1
-# print(delta)
-# print(type(delta))
+# フォルダの削除
+# outputs_path = Path("./outputs")
+# outputs_path.rmdir()
 
-###########################
-from datetime import timedelta
-d1 = datetime(2024, 1, 13, 15, 30, 45)
-delta = timedelta(days=3, minutes=30)
-d2 = d1 + delta
-print(d2)
+import json
+
+json_str = '{"name": "齋藤", "age": 23}'
+dict_obj = json.loads(json_str)
+
+print(dict_obj)
