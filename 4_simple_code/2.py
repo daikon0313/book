@@ -46,7 +46,23 @@ from pathlib import Path
 
 import json
 
-json_str = '{"name": "齋藤", "age": 23}'
-dict_obj = json.loads(json_str)
+# json_str = '{"name": "齋藤", "age": 23}'
+# dict_obj = json.loads(json_str)
 
-print(dict_obj)
+# print(dict_obj)
+
+# with open("./sample_docs/user.json") as f:
+#     user = json.load(f)
+
+# print(user)
+# print(type(user))
+
+user = {
+    "id": "A001",
+    "age": None,
+    "is_active": True,
+    "point": 2,
+}
+
+with open("./sample_docs/user_write.json", "w") as f:
+    json_str = json.dump(user, f)
