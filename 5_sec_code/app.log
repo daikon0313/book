@@ -1,0 +1,9 @@
+クリティカルなメッセージ
+エラーなメッセージ
+ワーニングなメッセージ
+インフォなメッセージ
+ファイルの書き込み失敗しました
+Traceback (most recent call last):
+  File "/python/clean_code/5_sec_code/7.py", line 28, in <module>
+    with open("./outputs/data.txt", mode="w") as f:
+FileNotFoundError: [Errno 2] No such file or directory: './outputs/data.txt'
